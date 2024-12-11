@@ -1,0 +1,78 @@
+body{
+  background-color: #fff;
+}
+.card {
+  display: flex; /* Active Flexbox pour disposer les éléments horizontalement */
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  justify-content: space-between; /* Ajoute un espacement entre les éléments */
+  width: 100%; /* Assurez-vous que la carte occupe toute la largeur disponible */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+  overflow: hidden;
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s
+}
+.card:hover{
+  transform: translateY(-10px); /* Déplace légèrement la carte vers le haut */ box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 16px; /* Augmente l'ombre */ }
+
+.card-img-left {
+  flex: 0 0 40%; /* L'image occupe 40% de la largeur et ne rétrécit/pousse pas */
+  max-width: 100%;
+  height: auto; /* Préserve les proportions */
+  object-fit: cover;
+  gap:200px;
+}
+
+.card-body {
+  flex: 1; /* Le contenu occupe le reste de l'espace */
+  padding: 50px;
+  text-align: left; /* Aligne le texte à gauche */
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column; /* Empile les éléments sur les petits écrans */
+  }
+
+  .card-img-left {
+    width: 100%; /* L'image occupe toute la largeur */
+  }
+
+  .card-body {
+    width: 100%;
+    text-align: center; /* Centre le texte sur les petits écrans */
+  }
+}
